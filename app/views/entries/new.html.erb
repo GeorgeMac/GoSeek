@@ -1,20 +1,23 @@
 <%= form_for :entry, url: "/entries" do |e| %>
-  <p>
-    <%= e.label :title %><br>
-    <%= e.text_field :title %>
-  </p>
- 
-  <p>
-    <%= e.label :description %><br>
-    <%= e.text_area :description %>
-  </p>
+  <fieldset>
+    <legend>Create a new Go<-Seek entry</legend>
+    <p>
+      <%= e.label :title %><br>
+      <%= e.text_field :title %>
+    </p>
+   
+    <p>
+      <%= e.label :description %><br>
+      <%= e.text_area :description, rows: "4" %>
+    </p>
 
-  <p>
-    <%= e.label :url %><br>
-    <%= e.text_field :url %>
-  </p>
- 
-  <p>
-    <%= e.submit %>
-  </p>
+    <p>
+      <%= e.label :url %><br>
+      <%= e.text_field :url %>
+    </p>
+   
+    <p>
+      <button name='commit' type='submit' class="btn">Create Entry</button>
+    </p>
+  </fieldset>
 <% end %>

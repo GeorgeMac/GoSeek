@@ -1,0 +1,20 @@
+<%= form_for :entry, url: entry_url(@entry), html: {method: 'patch'} do |e| %>
+  <p>
+    <%= e.label :title %><br>
+    <%= e.text_field :title, value: @entry.title %>
+  </p>
+ 
+  <p>
+    <%= e.label :description %><br>
+    <%= e.text_area :description, value: @entry.description %>
+  </p>
+
+  <p>
+    <%= e.label :url %><br>
+    <%= e.text_field :url, value: @entry.url %>
+  </p>
+ 
+  <p>
+    <%= e.submit %>
+  </p>
+<% end %>
