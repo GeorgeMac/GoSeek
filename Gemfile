@@ -46,3 +46,10 @@ end
 
 # Tire
 gem 'tire', '~> 0.6.0'
+
+# Pagination
+gem 'will_paginate', '~> 3.0.4'
+gem 'will_paginate-bootstrap', '~> 0.2.5'
+
+# Bootstrap
+gem 'bootstrap-sass', '~> 2.3.2.0'
