@@ -53,3 +53,6 @@ gem 'will_paginate-bootstrap', '~> 0.2.5'
 
 # Bootstrap
 gem 'bootstrap-sass', '~> 2.3.2.0'
+
+# Octokit
+gem "octokit", "~> 2.0"
