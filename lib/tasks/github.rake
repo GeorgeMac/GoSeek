@@ -1,6 +1,6 @@
 require 'octokit'
 
-client = Octokit::Client.new :login => 'GeorgeMac', :password => '*****'
+client = Octokit::Client.new :login => 'Username', :password => 'Password'
 
 namespace :ghub do
 	task :legacy_seed, [:count] => :environment do |t, args|
@@ -20,8 +20,6 @@ namespace :ghub do
 				items.each{ |e| ghubToEntry(e) }
 			end
 		end
-
-
 	end
 end
 
