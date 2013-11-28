@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-GoSeek::Application.config.secret_key_base = '5b757e253a30584ac00d1b262931f1522f57ac7d409712a70689a88e5e5b2659f4565d298f83913d4f82ecc28802fac3f4efd06fab9df052a002acb4ad2195cb'
+GoSeek::Application.config.secret_key_base = '9b4fe1423951aa78d41aa0ddc577190b47e6e892cc7e81ceee5899e46704c06c61634a0c548b294ed5e215ec988e17ac05c09964df65c1f82277dd44a0761b2e'

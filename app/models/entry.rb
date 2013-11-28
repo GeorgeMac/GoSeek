@@ -4,6 +4,7 @@ class Entry < ActiveRecord::Base
     include Tire::Model::Callbacks
 
     validates_presence_of :title, :url
+    belongs_to :user
 
     mapping do
         indexes :title,         :boost    => 3.0
@@ -14,7 +15,7 @@ class Entry < ActiveRecord::Base
     end
 
     def self.search(params)
-        tire.search(page: params[:page], per_page: 5) do
+        tire.search(page: params[:page], per_page: 10) do
             query do
                 dis_max do
                     query { match "title", params[:q] }

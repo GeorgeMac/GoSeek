@@ -6,4 +6,8 @@
 	<%= @entry.description %>
 </p>
 
+<p>
+	Added By: <%= image_tag @entry.user.gravatar_url, width: 150 %>
+</p>
+
 <a href="<%= @entry.url %>" target="_blank">GitHub Page</a>

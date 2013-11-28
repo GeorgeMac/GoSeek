@@ -1,5 +1,7 @@
 class EntriesController < ApplicationController
 
+    before_filter :authenticate_user!, only: [:new, :create, :update]
+
 	def index
         @entries = Entry.search params
 	end
@@ -30,9 +32,10 @@ class EntriesController < ApplicationController
 
     private
     def create_params
-    	entry = params.require(:entry).permit(:title,:description,:url)
+    	entry = params.require(:entry).permit(:title,:description,:url,:user_id)
         entry.require(:title)
         entry.require(:url)
+        entry.require(:user_id)
         return entry
     end
 

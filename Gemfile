@@ -32,6 +32,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+
+group :development do
+	gem 'guard-livereload', require: false
+  gem "better_errors"
+  gem "binding_of_caller"
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -56,3 +62,9 @@ gem 'bootstrap-sass', '~> 2.3.2.0'
 
 # Octokit
 gem "octokit", "~> 2.0"
+
+# Devise
+gem "devise", "~> 3.1.1"
+
+# Gravtastic
+gem 'gravtastic', "~> 3.2.3"

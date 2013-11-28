@@ -1,0 +1,18 @@
+<div class="page-header">
+	<h1>
+		<%= current_user.email %>
+	</h1>
+</div>
+<div class="row">
+	<div class="span6">
+		<dl class="dl-horizontal">
+			<% current_user.entries.each do |e| %>
+			    <dt> <strong> <%= link_to e.title, e, target: "_blank" %>: </strong> </dt>
+			    <dd> <%= e.description %> </dd>
+			<% end %>
+		</dl>
+	</div>
+	<div class="thumbnail span2 offset8">
+	    <%= image_tag current_user.gravatar_url %>
+	</div>
+</row>
